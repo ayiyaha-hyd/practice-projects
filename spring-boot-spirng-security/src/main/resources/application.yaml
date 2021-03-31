@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+# 方式一：通过配置文件设置security用户名和密码
+#spring:
+#  security:
+#    user:
+#      name: hyd
+#      password: hyd
+
+# 配置数据库连接池
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://117.50.3.120:3306/practice?useSSL=false
+    username: hyd
+    password: 123456
