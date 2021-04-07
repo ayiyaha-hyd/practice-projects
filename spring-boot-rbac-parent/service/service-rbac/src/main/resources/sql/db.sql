@@ -1,0 +1,2 @@
+# 创建数据库
+CREATE TABLE IF NOT EXISTS acl;
