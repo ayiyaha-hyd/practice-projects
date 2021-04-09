@@ -1,6 +1,6 @@
 package com.hyd.rbac.helper;
 
-import com.hyd.rbac.security.entity.Permission;
+import com.hyd.rbac.entity.Permission;
 
 import java.util.ArrayList;
 import java.util.List;

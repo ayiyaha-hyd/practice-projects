@@ -1,4 +1,4 @@
-package com.hyd.rbac.security.entity;
+package com.hyd.rbac.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 角色权限
+ * 
  * </p>
  *
  * @author testjava
@@ -21,18 +21,21 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("acl_role_permission")
-@ApiModel(value="RolePermission对象", description="角色权限")
-public class RolePermission implements Serializable {
+@TableName("acl_user_role")
+@ApiModel(value="UserRole对象", description="")
+public class UserRole implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty(value = "主键id")
     @TableId(value = "id", type = IdType.ID_WORKER_STR)
     private String id;
 
+    @ApiModelProperty(value = "角色id")
     private String roleId;
 
-    private String permissionId;
+    @ApiModelProperty(value = "用户id")
+    private String userId;
 
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
     private Boolean isDeleted;

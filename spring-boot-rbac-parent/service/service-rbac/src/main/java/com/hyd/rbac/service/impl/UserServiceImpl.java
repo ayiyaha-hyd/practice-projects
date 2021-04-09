@@ -3,7 +3,7 @@ package com.hyd.rbac.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hyd.rbac.service.UserService;
-import com.hyd.rbac.security.entity.User;
+import com.hyd.rbac.entity.User;
 import com.hyd.rbac.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 

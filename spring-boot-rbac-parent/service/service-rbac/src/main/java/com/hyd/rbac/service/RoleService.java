@@ -1,7 +1,7 @@
 package com.hyd.rbac.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hyd.rbac.security.entity.Role;
+import com.hyd.rbac.entity.Role;
 
 import java.util.List;
 import java.util.Map;

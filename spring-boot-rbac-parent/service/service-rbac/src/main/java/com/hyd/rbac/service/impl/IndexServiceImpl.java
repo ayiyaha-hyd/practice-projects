@@ -5,8 +5,8 @@ import com.hyd.rbac.service.IndexService;
 import com.hyd.rbac.service.PermissionService;
 import com.hyd.rbac.service.RoleService;
 import com.hyd.rbac.service.UserService;
-import com.hyd.rbac.security.entity.Role;
-import com.hyd.rbac.security.entity.User;
+import com.hyd.rbac.entity.Role;
+import com.hyd.rbac.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -37,6 +37,7 @@ public class IndexServiceImpl implements IndexService {
      * @param username
      * @return
      */
+    @Override
     public Map<String, Object> getUserInfo(String username) {
         Map<String, Object> result = new HashMap<>();
         User user = userService.selectByUsername(username);
@@ -68,6 +69,7 @@ public class IndexServiceImpl implements IndexService {
      * @param username
      * @return
      */
+    @Override
     public List<JSONObject> getMenu(String username) {
         User user = userService.selectByUsername(username);
 

@@ -1,7 +1,7 @@
 package com.hyd.rbac.helper;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hyd.rbac.security.entity.Permission;
+import com.hyd.rbac.entity.Permission;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;

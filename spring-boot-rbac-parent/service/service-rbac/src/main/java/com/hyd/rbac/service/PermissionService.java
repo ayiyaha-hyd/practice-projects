@@ -2,7 +2,7 @@ package com.hyd.rbac.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hyd.rbac.security.entity.Permission;
+import com.hyd.rbac.entity.Permission;
 
 import java.util.List;
 

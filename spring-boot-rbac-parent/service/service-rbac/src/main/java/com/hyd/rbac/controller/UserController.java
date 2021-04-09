@@ -3,7 +3,8 @@ package com.hyd.rbac.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.hyd.rbac.security.entity.User;
+import com.hyd.base.utils.MD5Util;
+import com.hyd.rbac.entity.User;
 import com.hyd.rbac.service.RoleService;
 import com.hyd.rbac.service.UserService;
 import com.hyd.base.utils.Response;
@@ -58,7 +59,7 @@ public class UserController {
     @ApiOperation(value = "新增管理用户")
     @PostMapping("save")
     public Response save(@RequestBody User user) {
-        user.setPassword(MD5.encrypt(user.getPassword()));
+        user.setPassword(MD5Util.encrypt(user.getPassword()));
         userService.save(user);
         return Response.success();
     }

@@ -1,12 +1,11 @@
 package com.hyd.security.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hyd.base.utils.Response;
+import com.hyd.base.utils.ResponseUtil;
 import com.hyd.security.entity.SecurityUser;
 import com.hyd.security.entity.User;
 import com.hyd.security.security.TokenManager;
-import com.hyd.base.utils.Response;
-import com.hyd.base.utils.ResponseUtil;
-import lombok.SneakyThrows;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -46,12 +45,17 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
      * @param response
      * @return
      */
-    @SneakyThrows
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response){
         //获取表单数据
-        User user = new ObjectMapper().readValue(request.getInputStream(), User.class);
-        return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword(),new ArrayList<>()));
+        User user = null;
+        try {
+            user = new ObjectMapper().readValue(request.getInputStream(), User.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword(), new ArrayList<>()));
+        return authenticate;
 
     }
 

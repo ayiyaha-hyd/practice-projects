@@ -1,7 +1,7 @@
 package com.hyd.rbac.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hyd.rbac.security.entity.RolePermission;
+import com.hyd.rbac.entity.RolePermission;
 
 /**
  * <p>

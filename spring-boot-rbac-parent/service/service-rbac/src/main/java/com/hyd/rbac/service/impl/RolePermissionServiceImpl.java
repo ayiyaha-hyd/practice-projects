@@ -1,9 +1,9 @@
 package com.hyd.rbac.service.impl;
 
-import com.atguigu.aclservice.entity.RolePermission;
-import com.atguigu.aclservice.mapper.RolePermissionMapper;
-import com.atguigu.aclservice.service.RolePermissionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hyd.rbac.entity.RolePermission;
+import com.hyd.rbac.mapper.RolePermissionMapper;
+import com.hyd.rbac.service.RolePermissionService;
 import org.springframework.stereotype.Service;
 
 /**

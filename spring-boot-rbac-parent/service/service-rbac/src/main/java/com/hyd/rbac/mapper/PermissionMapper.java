@@ -1,7 +1,7 @@
 package com.hyd.rbac.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.hyd.rbac.security.entity.Permission;
+import com.hyd.rbac.entity.Permission;
 
 import java.util.List;
 

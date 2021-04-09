@@ -22,6 +22,14 @@ public class SecurityUser implements UserDetails {
     //当前权限
     private List<String> permissionValueList;
 
+    public SecurityUser() {
+    }
+
+    public SecurityUser(User user) {
+        if (user != null) {
+            this.userInfo = user;
+        }
+    }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> authorities = new ArrayList<>();

@@ -1,6 +1,7 @@
 package com.hyd.rbac.service.impl;
 
-import com.hyd.rbac.security.entity.User;
+import com.alibaba.fastjson.JSONObject;
+import com.hyd.rbac.entity.User;
 import com.hyd.rbac.service.PermissionService;
 import com.hyd.rbac.service.UserService;
 import com.hyd.security.entity.SecurityUser;
@@ -36,11 +37,10 @@ public class UserDetailServiceImpl implements UserDetailsService {
         BeanUtils.copyProperties(user,sUser);
 
         //根据用户查询用户权限列表
-//       List<String> permissionValueList =  permissionService.selectPermissionByUserId(user.getId());
-        List<String> permissionValueList = null;
+       List<JSONObject> permissionValueList =  permissionService.selectPermissionByUserId(user.getId());
         SecurityUser securityUser = new SecurityUser();
         securityUser.setUserInfo(sUser);
-        securityUser.setPermissionValueList(permissionValueList);
+        securityUser.setPermissionValueList(permissionValueList);//存在问题
 
         return securityUser;
     }

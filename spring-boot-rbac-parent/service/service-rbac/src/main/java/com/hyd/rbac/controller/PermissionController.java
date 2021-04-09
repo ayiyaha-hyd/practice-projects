@@ -1,6 +1,6 @@
 package com.hyd.rbac.controller;
 
-import com.hyd.rbac.security.entity.Permission;
+import com.hyd.rbac.entity.Permission;
 import com.hyd.rbac.service.PermissionService;
 import com.hyd.base.utils.Response;
 import io.swagger.annotations.ApiOperation;

@@ -2,7 +2,7 @@ package com.hyd.rbac.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.hyd.rbac.security.entity.Role;
+import com.hyd.rbac.entity.Role;
 import com.hyd.rbac.service.RoleService;
 import com.hyd.base.utils.Response;
 import io.swagger.annotations.ApiOperation;

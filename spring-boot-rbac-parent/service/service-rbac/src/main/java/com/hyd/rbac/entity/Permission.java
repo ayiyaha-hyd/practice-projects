@@ -1,4 +1,4 @@
-package com.hyd.rbac.security.entity;
+package com.hyd.rbac.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;

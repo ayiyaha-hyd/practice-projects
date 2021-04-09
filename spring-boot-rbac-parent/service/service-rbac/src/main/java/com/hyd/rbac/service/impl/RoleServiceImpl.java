@@ -1,12 +1,12 @@
 package com.hyd.rbac.service.impl;
 
-import com.atguigu.aclservice.entity.Role;
-import com.atguigu.aclservice.entity.UserRole;
-import com.atguigu.aclservice.mapper.RoleMapper;
-import com.atguigu.aclservice.service.RoleService;
-import com.atguigu.aclservice.service.UserRoleService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hyd.rbac.entity.Role;
+import com.hyd.rbac.entity.UserRole;
+import com.hyd.rbac.mapper.RoleMapper;
+import com.hyd.rbac.service.RoleService;
+import com.hyd.rbac.service.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
