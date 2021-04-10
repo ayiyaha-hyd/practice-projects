@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>index</h1>
+<a th:href="@{/user/userInfo}">userInfo</a><br/>
+<a th:href="@{/user/userAdd}">userAdd</a><br/>
+<a th:href="@{/user/userDel}">userDel</a><br/>
+<a shiro:hasRole="admin">管理员</a>
+<a shiro:hasRole="staff">员工</a>
+<a shiro:hasRole="user">用户</a>
+<a shiro:hasPermission="user:info">所有人或用户可见</a>
+<a shiro:hasPermission="user:add">员工可见</a>
+<a shiro:hasPermission="user:del">用户可见</a>
+</body>
+</html>
